@@ -8,16 +8,17 @@ td, th, tr{
     text-align: center;
     border-radius: 10px;
 }
+
 th {
-    background-color: #a691c7;
+    background-color: #e7a1e1;
 
     font-weight: bold;
 }
 tr:nth-child(even) {
-    background-color: #81798d;
+    background-color: #b59adf;
 }
 tr:nth-child(odd) {
-    background-color: #453663;
+    background-color: #b14ba3;
 }
 tr:hover {
     background-color: #f1f1f1;
