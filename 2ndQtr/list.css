@@ -1,0 +1,61 @@
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: pink; 
+    margin-right: 8px;
+}
+ul {
+    list-style-type: none;
+    padding-left: 24px;
+}
+h1, h2 {
+    padding-left: 24px;
+  
+}
+
+ol li::marker {
+    content: "Step " counter(list-item) ". "; padding: 40px;
+}
+ol {
+    padding-left: 90px; 
+}
+ul li, ol li {
+    border-bottom: 2px solid rgb(31, 20, 22);
+
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.section-box {
+    border: 10px solid pink;
+    border-radius: 16px;
+    padding: 24px 32px;
+    margin: 16px;
+    max-width: 400px;
+    background: #fff0fa;
+    box-shadow: 0 2px 12px rgba(255, 105, 180, 0.08);
+    flex: 1 1 300px;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+} 
+
+.sections-row {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.body-border {
+    border: 8px solid hotpink;
+    border-radius: 100px;
+    max-width: 70%;
+    margin: 40px auto;
+    padding: 32px 16px;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(255, 105, 180, 0.10);
+}

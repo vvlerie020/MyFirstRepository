@@ -15,6 +15,7 @@ th {
     background-color: pink;
 
     font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 tr:nth-child(even) {
     background-color: PINK;
