@@ -1,0 +1,30 @@
+input[type="checkbox"] {
+    width: 18px;
+    height: 15px;
+    accent-color: pink; 
+    margin-right: 8px;
+    margin-top: 1px;
+    
+}
+ol li::marker {
+    content: "Step " counter(list-item) ". "; padding: 24%;
+
+}
+ol {
+    padding-left: 90px; 
+
+}
+ul {
+    list-style-type: none;
+    padding-left: 24px;
+    margin-bottom: 20px;
+}
+div {
+    background-color:pink ;
+    width: 30% ;
+    margin: 1%;
+    float: left ;
+    text-align: center;
+    border: 2px solid black ;
+margin-bottom: 20px;
+}
