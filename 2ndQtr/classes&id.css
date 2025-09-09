@@ -1,0 +1,45 @@
+.head{
+    background-color: blue ;
+    width: 92% ;
+    float:left ;
+    border: 2px solid black; 
+    margin: auto;
+    border-radius: 25px;
+    box-shadow: grey 10px 10px 5px;
+    height: 200px;
+    padding: 15px;
+}
+.heading{
+    text-align: center;
+    font-family: gill sans;
+    font-size: 40px;
+    color: black;
+    margin-top: 20px;
+}
+.para{
+    text-align: left;
+    font-family: verdana;
+    font-size: 20px;
+    color: black;
+}
+.content{
+    background-color: lightblue ;
+    width: 92% ;
+    float:left ;
+    border: 2px solid black; 
+    margin: 2%;
+    border-radius: 25px;
+    box-shadow: grey 10px 10px 5px;
+    height: 400px;
+    padding: 15px;
+}
+.sub-content{
+    background-color: lightblue ;
+    float:left ;
+    border: 2px solid black; 
+    margin: 2%;
+    border-radius: 25px;
+    box-shadow: grey 10px 10px 5px;
+    width: 29%;
+    height: 150px;
+}
