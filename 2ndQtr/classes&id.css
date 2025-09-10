@@ -8,6 +8,10 @@
     box-shadow: grey 10px 10px 5px;
     height: 200px;
     padding: 15px;
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    padding-left: 3%;
 }
 .heading{
     text-align: center;
@@ -15,12 +19,15 @@
     font-size: 40px;
     color: black;
     margin-top: 20px;
+     padding-left: 3%;
 }
 .para{
     text-align: left;
     font-family: verdana;
     font-size: 20px;
     color: black;
+     padding-left: 2%;
+    padding-right: 2%;
 }
 .content{
     background-color: lightblue ;
@@ -32,6 +39,7 @@
     box-shadow: grey 10px 10px 5px;
     height: 400px;
     padding: 15px;
+     padding-left: 3%;
 }
 .sub-content{
     background-color: lightblue ;
@@ -41,5 +49,141 @@
     border-radius: 25px;
     box-shadow: grey 10px 10px 5px;
     width: 29%;
-    height: 150px;
+    height: 140px;
+  
+}
+.content2{
+    background-color: lightblue ;
+    width: 92% ;
+    float:left ;
+    border: 2px solid black; 
+    margin: 2%; 
+    margin-bottom: 3%;
+    border-radius: 25px;
+    box-shadow: grey 10px 10px 5px;
+    height: 650px;
+    padding: 15px;
+    padding-bottom: 5%;
+    margin-top: 1%;
+    
+
+}
+.color1{
+    background-color: lightgreen ;
+     text-align: center;
+    font-size: large;
+}
+#Country1{
+    background-color: lightcoral ;
+    font-family: comicsans ;
+    
+}
+#Country2{
+    background-color: lightseagreen ;
+    font-family: 'Courier New', Courier, monospace;
+}
+#Country3{
+    background-color: lightpink ;
+      font-family: 'Courier New', Courier, monospace;
+}
+#Country4{
+    background-color: lightyellow ;
+      font-family: 'Courier New', Courier, monospace;
+}
+#Country5{
+    background-color: rgb(160, 44, 44) ;
+      font-family: 'Courier New', Courier, monospace;
+}
+#Country6{
+    background-color: lightcyan ;
+      font-family: 'Courier New', Courier, monospace;
+}
+#Country7{
+    background-color: rgb(126, 126, 36) ;
+      font-family: 'Courier New', Courier, monospace;
+}
+#Country8{
+    background-color: lightsteelblue ;
+      font-family: 'Courier New', Courier, monospace;
+}
+#Country9{
+    background-color: lightSalmon ;
+      font-family: 'Courier New', Courier, monospace;
+}
+.content3{
+   
+
+    width: 92% ;
+    float:left ;
+    border: 2px solid #4B5945; 
+    margin: 2%; 
+    margin-bottom: 3%;
+    border-radius: 25px;
+    box-shadow: #4B5945 10px 10px 5px;
+    height: 650px;
+    padding: 15px;
+    padding-bottom: 5%;
+    margin-top: 1%;
+}
+.color2{
+    background-color: #66785F ;
+     text-align: center;
+    font-family: serif;
+    border: #4B5945 solid 2px;
+    
+}
+#Animal1{
+    background-color: #91AC8F ;
+      font-family: 'Courier New', Courier, monospace;
+    border: #4B5945 solid 2px;
+    box-shadow: #4B5945 10px 10px 5px;
+}
+#Animal2{
+    background-color: #91AC8F ;
+      font-family: 'Courier New', Courier, monospace;
+      border: #4B5945 solid 2px;
+    box-shadow: #4B5945 10px 10px 5px;
+}
+#Animal3{
+    background-color:#91AC8F ;
+      font-family: 'Courier New', Courier, monospace;
+        border: #4B5945 solid 2px;
+    box-shadow: #4B5945 10px 10px 5px;
+}
+#Animal4{
+    background-color: #91AC8F ;
+      font-family: 'Courier New', Courier, monospace;
+        border: #4B5945 solid 2px;
+    box-shadow: #4B5945 10px 10px 5px;
+}
+#Animal5{
+    background-color: #91AC8F ;
+      font-family: 'Courier New', Courier, monospace;
+        border: #4B5945 solid 2px;
+    box-shadow: #4B5945 10px 10px 5px;
+}
+#Animal6{
+    background-color: #91AC8F ;
+      font-family: 'Courier New', Courier, monospace;
+        border: #4B5945 solid 2px;
+    box-shadow: #4B5945 10px 10px 5px;
+}
+
+#Animal7{
+    background-color:#91AC8F ;
+      font-family: 'Courier New', Courier, monospace;
+        border: #4B5945 solid 2px;
+    box-shadow: #4B5945 10px 10px 5px;
+}
+#Animal8{
+    background-color: #91AC8F ;
+      font-family: 'Courier New', Courier, monospace;
+        border: #4B5945 solid 2px;
+    box-shadow: #4B5945 10px 10px 5px;
+}
+#Animal9{
+    background-color: #91AC8F ;
+      font-family: 'Courier New', Courier, monospace;
+        border: #4B5945 solid 2px;
+    box-shadow: #4B5945 10px 10px 5px;
 }
