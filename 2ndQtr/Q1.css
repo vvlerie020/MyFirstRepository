@@ -1,0 +1,123 @@
+.heading{
+    text-align: center;
+    font-family: gill sans;
+    font-size: 40px;
+    color: black;
+    
+    
+}
+.content2{
+    background-color:powderblue ;
+    width: 99.9% ;
+    float:left ;
+    border: 2px solid crimson; 
+    border-radius: 25px;
+    box-shadow: crimson 5px 5px 5px 4px; 
+    height: 110px;
+    margin-top: -10px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+
+hr{
+    width: 150%;
+    border: 0;
+    height: 10px;
+    background-color: cornflowerblue;
+    margin-bottom: 20px;
+    padding-left: -10px;
+}
+    
+
+
+
+.content3{
+   
+
+    width: 80% ;
+    float:left ;
+    border: 2px solid white; 
+    margin: 2%; 
+    margin-bottom: 100%;
+    border-radius: 25px;
+    box-shadow: white 10px 10px 5px;
+    height: 650px;
+    padding: 15px;
+    padding-bottom: 50%;
+    margin-top: 1%;
+
+  
+}
+.color2{
+    background-color: white ;
+     text-align: left;
+    border:white solid 2px;
+    
+}
+#Animal1{
+    background-color: rgb(255, 255, 255) ;
+    border: white solid 2px;
+    box-shadow:gold 10px 7px 10px 1px;
+    width: 80%;
+    height: 16%;
+    margin-bottom: 0%;
+    margin-left: 10%;
+    padding-left: 10px;
+    margin-top: -1%;
+    
+}
+#Animal2{
+margin-top: 18px;
+    background-color: rgb(219, 223, 221);
+      border: rgb(219, 223, 221) 2px;
+    box-shadow: rgba(43, 100, 185, 0.993) 3px 5px 4px 2.5px;
+     width: 26%;
+     height: 50px;
+     margin-right: -15px;
+     margin-left: 10%;
+     text-align: center;
+}
+#Animal3{
+    margin-top: 18px;
+    background-color:rgb(219, 223, 221) ;
+        border: rgb(219, 223, 221) ;
+    box-shadow: rgba(43, 100, 185, 0.993) 3px 5px 4px 2.5px;
+     width: 26%;
+       height: 50px;
+         margin-right: -15px;
+         text-align: center;
+}
+#Animal4{
+    margin-top: 18px;
+    background-color:rgb(219, 223, 221) ;
+        border: rgb(219, 223, 221);
+    box-shadow:rgba(43, 100, 185, 0.993) 3px 5px 4px 2.5px;
+     width: 26%;
+       height: 50px;
+         margin-right: -15px;
+         text-align: center;
+}
+
+.sub-content{
+    background-color: lightblue ;
+    float:left ;
+    border: 2px solid black; 
+    margin: 2%;
+    border-radius: 25px;
+    box-shadow: grey 3px 5px 4px 2.5px;
+    width: 29%;
+    height: 140px;
+    margin-right: -15px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
