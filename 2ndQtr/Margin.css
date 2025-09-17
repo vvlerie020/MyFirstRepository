@@ -1,8 +1,32 @@
 .sub-content{
     background-color: lightblue ;
     float:left ;
-    border: 2px solid #4B5945; 
-    box-shadow: #4B5945 10px 10px 10px;
-    width: 10.5%;
+    border:0.5px solid #4B5945; 
+    width: 97px;
+    height: 97px;
 
+}
+.content{
+    width: 300px ;
+    float:left ;
+    height: 300px;
+    margin-left: 20px;
+}
+#Country5 {
+    margin-left: 5px;
+    width: 92px;
+}
+#Country6 {
+    margin-right: 5px;
+    width: 92px;
+}
+#Country7 {
+    margin-top: 5px;
+    width: 97px;
+    height: 92px;
+}
+#Country8 {
+    margin-bottom: 5px;
+    width: 97px;
+    height: 92px;
 }
