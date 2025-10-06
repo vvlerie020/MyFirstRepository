@@ -55,7 +55,6 @@
 .content2{
     background-color: lightblue ;
     width: 92% ;
-    float:left ;
     border: 2px solid #4B5945; 
     margin: 2%; 
     margin-bottom: 3%;
@@ -65,8 +64,15 @@
     padding: 15px;
     padding-bottom: 5%;
     margin-top: 1%;
-    
-
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.content2 > * {
+    width: 30%;            
+    box-sizing: border-box;
+    margin: 0;           
+    float: none;
 }
 .color1{
     background-color: #C1CFA1 ;
@@ -127,6 +133,15 @@
     padding: 15px;
     padding-bottom: 5%;
     margin-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.content3 > * {
+    width: 30%;            
+    box-sizing: border-box;
+    margin: 0;           
+    float: none;           
 }
 .color2{
     background-color: #66785F ;
@@ -189,4 +204,79 @@
       font-family: 'Courier New', Courier, monospace;
         border: #4B5945 solid 2px;
     box-shadow:#22291f 10px 10px 5px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   background-color: #FBE8E7;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  z-index: 102;
+  left: 0;
+  top: 25.1%;
+}
+
+li a {
+  display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: beige;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555555;
+  color: white;
+}
+header {
+  background-color: #F3C5C5;
+  padding: 30px;
+  text-align: center;
+  font-size: 23.57px;
+  color: black;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  width: calc(100% - 60px);
+  z-index: 101;
+}
+article {
+  float: left;
+  padding: 20px;
+  width: calc(100% - 245px);
+  background-color: #FBE8E7;
+   margin-top: 180px;
+  color: BLACK;
+  margin-left: 200px;
+}
+h1 {
+    text-align: center;
+    color: black; ;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.content3 h2 {
+  width: 100%;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+.content2 h2 {
+  width: 100%;
+  margin: 0 0 10px 0;
+  text-align: center;
 }

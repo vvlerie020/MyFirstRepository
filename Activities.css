@@ -13,6 +13,7 @@ ul {
   overflow: auto;
   z-index: 102;
   left: 0;
+  top: 25.1%;
 }
 
 li a {
@@ -38,17 +39,17 @@ header {
   text-align: center;
   font-size: 23.57px;
   color: black;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
-  left: 200px;
-  width: calc(100% - 200px);
+
+  width: calc(100% - 60px);
   z-index: 101;
 }
 article {
   float: left;
   padding: 20px;
-  width: calc(100% - 255px);
+  width: calc(100% - 245px);
   background-color: #FBE8E7;
    
   color: BLACK;
