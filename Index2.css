@@ -135,12 +135,7 @@ ul li a:hover:not(.active) {
   position: relative;
   font-size: 30px;
 }
-footer {
-  background-color: #6C4A4A;
-  padding: 38px;
-  text-align: center;
-  color: white;
-}
+
 .dropbtn {
   background-color: #DDBEBE;
   color: black;
