@@ -84,7 +84,7 @@
     background-color:#A5B68D ;
     font-family: comicsans ;
     box-shadow: #4B5945;
-    
+     margin-left: 40px;
 }
 #Country2{
     background-color: #A5B68D ;
@@ -98,6 +98,7 @@
 #Country4{
     background-color: #A5B68D ;
       font-family: 'Courier New', Courier, monospace;
+       margin-left: 40px;
 }
 #Country5{
     background-color:#A5B68D ;
@@ -110,6 +111,7 @@
 #Country7{
     background-color: #A5B68D ;
       font-family: 'Courier New', Courier, monospace;
+       margin-left: 40px;
 }
 #Country8{
     background-color:#A5B68D ;
@@ -136,12 +138,14 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    
 }
 .content3 > * {
     width: 30%;            
     box-sizing: border-box;
     margin: 0;           
-    float: none;           
+    float: none;      
+         
 }
 .color2{
     background-color: #66785F ;
@@ -155,6 +159,7 @@
       font-family: 'Courier New', Courier, monospace;
     border: #4B5945 solid 2px;
     box-shadow: #22291f 10px 10px 5px;
+    margin-left: 40px;
 }
 #Animal2{
     background-color: #91AC8F ;
@@ -173,6 +178,7 @@
       font-family: 'Courier New', Courier, monospace;
         border: #4B5945 solid 2px;
     box-shadow: #22291f 10px 10px 5px;
+     margin-left: 40px;
 }
 #Animal5{
     background-color: #91AC8F ;
@@ -192,6 +198,7 @@
       font-family: 'Courier New', Courier, monospace;
         border: #4B5945 solid 2px;
     box-shadow:  #22291f 10px 10px 5px;
+     margin-left: 40px;
 }
 #Animal8{
     background-color: #91AC8F ;
@@ -222,7 +229,8 @@ ul {
   overflow: auto;
   z-index: 102;
   left: 0;
-  top: 25.1%;
+ top: 18.91%;
+    font-size: x-large;
 }
 
 li a {
@@ -279,4 +287,22 @@ h1 {
   width: 100%;
   margin: 0 0 10px 0;
   text-align: center;
+}
+#ads{
+    border: solid #F3C5C5;
+    height: 65px;
+    width: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #F3C5C5;
+    translate: 650% 450%;
+    gap: 5px;
+    border-radius: 100px;
+}
+ a {
+    text-decoration: none;
+    color: black;
+text-align: center;
+
 }

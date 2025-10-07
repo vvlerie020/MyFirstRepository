@@ -47,7 +47,8 @@ ul {
   overflow: auto;
   z-index: 102;
   left: 0;
-  top: 25.1%;
+  top: 18.91%;
+     font-size: x-large;
 }
 
 li a {
@@ -88,4 +89,22 @@ article {
    margin-top: 180px;
   color: BLACK;
   margin-left: 200px;
+}
+#ads{
+    border: solid #F3C5C5;
+    height: 65px;
+    width: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #F3C5C5;
+    translate: 650% 450%;
+    gap: 5px;
+    border-radius: 100px;
+}
+ a {
+    text-decoration: none;
+    color: black;
+text-align: center;
+
 }

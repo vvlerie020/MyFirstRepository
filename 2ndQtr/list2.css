@@ -1,14 +1,14 @@
 .content3{
 
-    width: 80% ;
+    width: 150% ;
     float:left ;
     border: 2px solid rgb(0, 0, 0); 
     margin: 2%; 
-    margin-bottom: 100%;
+   
     border-radius: 25px;
     box-shadow: rgb(95, 5, 5) 10px 10px 10px;
-    height: 4000%;
-    padding: 15px;
+    height: 50%;
+    margin-left: -30%;
     margin-top: 1%;
     padding-bottom: 1%;
 
@@ -95,4 +95,99 @@ input[type="checkbox"] {
     height: 18px;
     accent-color:  rgb(95, 5, 5); 
     margin-right: 8px;
+}
+#ads{
+    border: solid #F3C5C5;
+    height: 65px;
+    width: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #F3C5C5;
+    translate: 650% 450%;
+    gap: 5px;
+    border-radius: 100px;
+}
+ a {
+    text-decoration: none;
+    color: black;
+text-align: center;
+
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   background-color: #FBE8E7;
+}
+ul.sidebar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  z-index: 102;
+  left: 0;
+   top: 18.91%;
+}
+
+li a {
+  display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: beige;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555555;
+  color: white;
+}
+header {
+  background-color: #F3C5C5;
+  padding: 30px;
+  text-align: center;
+  font-size: 23.57px;
+  color: black;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  width: calc(100% - 60px);
+  z-index: 101;
+}
+article {
+  float: left;
+  padding: 20px;
+  width: calc(100% - 245px);
+  background-color: #FBE8E7;
+   margin-top: 180px;
+  color: BLACK;
+  margin-left: 200px;
+}
+#ads{
+    border: solid #F3C5C5;
+    height: 65px;
+    width: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #F3C5C5;
+    translate: 650% 450%;
+    gap: 5px;
+    border-radius: 100px;
+}
+ a {
+    text-decoration: none;
+    color: black;
+text-align: center;
+
 }
