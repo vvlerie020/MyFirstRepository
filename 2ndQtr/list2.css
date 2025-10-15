@@ -131,7 +131,7 @@ ul.sidebar {
   overflow: auto;
   z-index: 102;
   left: 0;
-   top: 18.91%;
+   top: 25.1%;
 }
 
 li a {
@@ -169,7 +169,7 @@ article {
   padding: 20px;
   width: calc(100% - 245px);
   background-color: #FBE8E7;
-   margin-top: 180px;
+   margin-top: 160px;
   color: BLACK;
   margin-left: 200px;
 }
