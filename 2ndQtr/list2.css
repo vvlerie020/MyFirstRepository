@@ -73,9 +73,7 @@ body {
 ul {
     list-style-type: none;
     padding-left: 20;
-    margin-bottom: 25px;
-    text-align: left;
-    font-size: x-large;
+  
 
 }
 ol li::marker {
@@ -131,7 +129,7 @@ ul.sidebar {
   overflow: auto;
   z-index: 102;
   left: 0;
-   top: 25.1%;
+   top: 25.9%;
 }
 
 li a {
@@ -171,7 +169,7 @@ article {
   background-color: #FBE8E7;
    margin-top: 160px;
   color: BLACK;
-  margin-left: 200px;
+  margin-left: 250px;
 }
 #ads{
     border: solid #F3C5C5;
