@@ -121,12 +121,12 @@ li a {
 }
 
 li a.active {
-  background-color: #04AA6D;
+  background-color: #f8c8c8;
   color: white;
 }
 
 li a:hover:not(.active) {
-  background-color: #555555;
+  background-color: #e9cccc;
   color: white;
 }
 header {

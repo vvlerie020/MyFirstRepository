@@ -1,17 +1,9 @@
-h1 {
-    font-size: 70px;
-    text-align: center;
-    color: aliceblue;
-    margin-top: 5%;
-     margin-top: 12vh;
-}
 body {
   background-image: url(green1.jpg);
   background-repeat: no-repeat;
  background-size: 100% 100%;
   background-attachment: fixed;
-   overflow: hidden;
-  height: 100vh;
+   
   
 }
 h1 {
@@ -38,6 +30,7 @@ ul::before {
   background-color: white; 
   opacity: 0.5; 
   z-index: -1; 
+  
 }
 
 
@@ -90,3 +83,34 @@ ul li:last-child {
     height: 45%;
     z-index: 0;
 }
+.whatislit {
+    position: absolute;
+    top: 30%;
+    left: 7%;
+    width: 85%;
+    height: 85%;
+    z-index: 0;
+    border-radius: 20px;
+    
+}
+.second {
+    position: absolute;
+    top: 20%;
+    left: 1.8%;
+    width: 85%;
+    height: 85%;
+    z-index: 0;
+   
+    translate: 6.2% 109%;
+}
+.third {
+    position: absolute;
+    top: -1.9%;
+    left: -3.8%;
+    width: 85%;
+    height: 85%;
+    z-index: 0;
+   border-radius: 20px;
+    translate: 12.8% 218%;
+bottom: 20%;
+}   
