@@ -7,6 +7,111 @@
     
 </head>
 <body style="background-color: deepskyblue; text-align: center;">
+     <style>
+
+body {
+  margin: 0;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  z-index: 102;
+  left: 0;
+  top: 25.1%;
+}
+
+li a {
+  display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: beige;
+}
+
+li a.active {
+  background-color: #f8c8c8;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #e9cccc;
+  color: white;
+}
+header {
+  background-color: #F3C5C5;
+  padding: 30px;
+  text-align: center;
+  font-size: 23.57px;
+  color: black;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  width: calc(100% - 60px);
+  z-index: 101;
+}
+article {
+  float: left;
+  padding: 20px;
+  width: calc(100% - 245px);
+  background-color: #FBE8E7;
+   margin-top: 160px;
+  color: BLACK;
+  margin-left: 200px;
+}
+#ads{
+    border: solid #F3C5C5;
+    height: 65px;
+    width: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #F3C5C5;
+    translate: 650% 450%;
+    gap: 5px;
+    border-radius: 100px;
+}
+ a {
+    text-decoration: none;
+    color: black;
+text-align: center;
+
+}
+
+
+
+    </style>
+    <header>
+  <h2>ACTIVITIES</h2>
+</header>
+
+<section>
+    
+        <ul>
+     <li><a  href="Resume.html">RESUME</a></li>
+      <li><a href="Attributes.html">ATTRIBUTES</a></li>
+      <li><a  class="active" href="Color.html">COLOR</a></li>
+      <li><a href="CSS.html">CSS</a></li>
+      <li><a href="Table.html">TABLE</a></li>
+      <li><a href="Links and img/1main.html">LINKS & IMAGES</a></li>
+      <li><a href="sale1/house.html">IMG MAP #1</a></li>
+      <li><a href="sale2/CURTAIN.html">IMG MAP #2</a></li>
+      <li><a href="Shapes&Img/Main.html">SHAPES & IMAGES</a></li>
+      <li><a href="Shop/Uniqlo.html">SHOP IMG MAP</a></li>
+      <li><a href="/Index.html">HOME</a></li>
+     
+        </ul>
+    
+
+    <article>
     <h1 style="background-color: aliceblue;text-align: center;">Color Activity</h1>
 <h3>Declaring color using their names</h3>
     <p style="background-color: red; text-align: center; border: 10px solid yellow;">This paragraph is colored red.</p>
@@ -64,5 +169,7 @@
 <p style="background-color: hsl(275, 100%, 50%, 0.8)"> The background color is hsl(275, 100%, 50%, 0.8)</p>
 <p style="background-color: hsl(300, 100%, 50%, 1)"> The background color is hsl(300, 100%, 50%, 1z)</p>
 
+    </article>
+</section>
 </body>
 </html>
