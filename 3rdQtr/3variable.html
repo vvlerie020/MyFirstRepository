@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VARIABLE</title>
+</head>
+<body>
+    <h1>Rain </h1>
+    <button type="button" onclick="private_variable()">This will show the 
+private variable
+    </button>
+    <script>
+        let x = 5;
+        let y = 10;
+        console.log(x + y);
+const z = 100;
+console.log(z);
+let_this = 5;
+console.log(let_this);
+var studentName = "John Doe";
+console.log(studentName);
+function private_variable() {
+    let _x = 25;
+    console.log(_x);
+}
+var $ = "This is a valid variable name";
+let $$ = "this is also valid";
+const $$$valid = "still valid";
+
+console.log($);
+console.log($$$valid);
+console.log($$);
+let declareVar; // Declaration without initialization
+declareVar = "Now I am initialized"; // Initialization
+console.log(declareVar); 
+const price1 = 5;
+const price2 = 10;
+let total = price1 + price2;
+console.log("Total Price: " + total);
+autoVar = "This is an auto global variable";
+autoVar = "change value of auto global variable";
+console.log(autoVar);
+let num1 = 15;
+let num2 = 25;
+let num = 30;
+console.log(num1 + num2 + num);
+let text1 = "Hello, ";
+let text2 = "World!";
+let text3 = "!";
+console.log(text1+ "" + text2 + text3);
+let a = "a", b = "b", c = "c";
+console.log(a + b + c);
+
+
+let globalVar = "I am a global variable";
+{
+    let localVar = "I am a local variable";
+    console.log(globalVar); // This will work
+    console.log(localVar);
+}
+{
+    let localVar = "I am another local variable";
+    console.log(localVar); // This will work
+    console.log(globalVar); // This will also work
+}
+    let reAssignLet = "first value";
+    console.log(reAssignLet);
+    let reAssignLet2 = "second value"; 
+    console.log(reAssignLet2);
+
+    var reDeclareVar = "first declaration";
+    console.log(reDeclareVar);
+    var reDeclareVar = "second declaration";
+    console.log(reDeclareVar);
+
+    hoistedVar = "I am hoisted"; //initialized before declaration
+    console.log(hoistedVar);
+    //let hoistedVar;
+
+    let numBig = 123456789012345678901234567890;
+    console.log (numBig)
+    </script>
+</body>
+</html>

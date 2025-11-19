@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-Puzzle Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <canvas id="puzzleCanvas" width="300" height="300"></canvas>
+        <div id="message">Arrange the tiles in order!</div>
+        <button id="shuffleBtn">Shuffle</button>
+    </div>
+    <script>
+        const canvas = document.getElementById('puzzleCanvas');
+        const ctx = canvas.getContext('2d');
+        const message = document.getElementById('message');
+        const shuffleBtn = document.getElementById('shuffleBtn');
+
+        const gridSize = 3;
+        const tileSize = canvas.width / gridSize;
+        let grid = [];
+        let emptyPos = { x: 2, y: 2 }; // Bottom-right empty
+
+        // Initialize grid
+        function initGrid() {
+            grid = [];
+            for (let y = 0; y < gridSize; y++) {
+                grid[y] = [];
+                for (let x = 0; x < gridSize; x++) {
+                    grid[y][x] = y * gridSize + x + 1;
+                }
+            }
+            grid[2][2] = 0; // Empty
+        }
+
+        // Draw the puzzle
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let y = 0; y < gridSize; y++) {
+                for (let x = 0; x < gridSize; x++) {
+                    const num = grid[y][x];
+                    if (num !== 0) {
+                        ctx.fillStyle = '#4CAF50';
+                        ctx.fillRect(x * tileSize, y * tileSize, tileSize, tileSize);
+                        ctx.strokeStyle = '#333';
+                        ctx.strokeRect(x * tileSize, y * tileSize, tileSize, tileSize);
+                        ctx.fillStyle = '#fff';
+                        ctx.font = '24px Arial';
+                        ctx.textAlign = 'center';
+                        ctx.fillText(num, x * tileSize + tileSize / 2, y * tileSize + tileSize / 2 + 8);
+                    } else {
+                        ctx.fillStyle = '#fff';
+                        ctx.fillRect(x * tileSize, y * tileSize, tileSize, tileSize);
+                        ctx.strokeStyle = '#333';
+                        ctx.strokeRect(x * tileSize, y * tileSize, tileSize, tileSize);
+                    }
+                }
+            }
+        }
+
+        // Check if puzzle is solved
+        function isSolved() {
+            for (let y = 0; y < gridSize; y++) {
+                for (let x = 0; x < gridSize; x++) {
+                    const expected = y * gridSize + x + 1;
+                    if (grid[y][x] !== (expected === 9 ? 0 : expected)) {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        // Shuffle the puzzle (ensure solvable)
+        function shuffle() {
+            do {
+                for (let i = 0; i < 1000; i++) {
+                    const directions = [
+                        { dx: 0, dy: -1 }, // up
+                        { dx: 0, dy: 1 },  // down
+                        { dx: -1, dy: 0 }, // left
+                        { dx: 1, dy: 0 }   // right
+                    ];
+                    const dir = directions[Math.floor(Math.random() * directions.length)];
+                    const newX = emptyPos.x + dir.dx;
+                    const newY = emptyPos.y + dir.dy;
+                    if (newX >= 0 && newX < gridSize && newY >= 0 && newY < gridSize) {
+                        grid[emptyPos.y][emptyPos.x] = grid[newY][newX];
+                        grid[newY][newX] = 0;
+                        emptyPos = { x: newX, y: newY };
+                    }
+                }
+            } while (isSolved()); // Ensure it's not already solved
+            draw();
+            message.textContent = 'Arrange the tiles in order!';
+        }
+
+        // Move tile if adjacent to empty
+        function moveTile(x, y) {
+            const dx = Math.abs(x - emptyPos.x);
+            const dy = Math.abs(y - emptyPos.y);
+            if ((dx === 1 && dy === 0) || (dx === 0 && dy === 1)) {
+                grid[emptyPos.y][emptyPos.x] = grid[y][x];
+                grid[y][x] = 0;
+                emptyPos = { x: x, y: y };
+                draw();
+                if (isSolved()) {
+                    message.textContent = 'You win!';
+                }
+            }
+        }
+
+        // Handle canvas click
+        canvas.addEventListener('click', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const x = Math.floor((e.clientX - rect.left) / tileSize);
+            const y = Math.floor((e.clientY - rect.top) / tileSize);
+            moveTile(x, y);
+        });
+
+        // Handle keyboard (arrow keys)
+        document.addEventListener('keydown', (e) => {
+            let targetX = emptyPos.x;
+            let targetY = emptyPos.y;
+            if (e.key === 'ArrowUp') targetY--;
+            else if (e.key === 'ArrowDown') targetY++;
+            else if (e.key === 'ArrowLeft') targetX--;
+            else if (e.key === 'ArrowRight') targetX++;
+            if (targetX >= 0 && targetX < gridSize && targetY >= 0 && targetY < gridSize) {
+                moveTile(targetX, targetY);
+            }
+        });
+
+        shuffleBtn.addEventListener('click', shuffle);
+
+        // Initialize
+        initGrid();
+        shuffle();
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNa kong JavaScript</title>
+    <script src="1Javascript.js"></script>
+    <script>
+    function alert1() {
+        window.alert("Ito ang Alert 1 gamit ang head!");
+    }
+    function cons1() {
+        console.log("Ito ang Console Log 1 gamit ang head!");
+    }
+    </script>
+</head>
+<body>
+    <h1>Una kong JavaScript Web Page</h1>
+    <h2>Ang sunod na elemento ay resulta ng Java script na nakalagay sa body</h2>
+   <p id="p1">Itong paragraph ay magbabago gamit ang pindutin sa ibaba</p>
+    <button type="button" onclick="changep1()">Pindutin ako</button>
+<hr>
+<p id="p2">This paragraph will change the button above</p>
+     <button type="button" onclick="changep2()">Pindutin ako</button>
+     <hr>
+        <p id="p3">This paragraph will change using an external JavaScript file</p>
+        <button type="button" onclick="changeP3()">Click me</button>
+        <hr>
+        <h4>This part will use the window alert output of a JavaScript</h4>
+        <button type="button" onclick="alert1()">Click me for Alert 1</button>
+        <button type="button" onclick="alert2()">Pindutin ako para sa Alert 2</button>
+       <button type="button" onclick="alert3()">Click me for Alert 3</button> 
+
+        <hr>
+        <h4>This part will use the console output of a JavaScript</h4>
+        <button type="button" onclick="cons1()">Click me for Alert 1</button>
+        <button type="button" onclick="cons2()">Click me for Alert 2</button>
+       <button type="button" onclick="cons3()">Click me for Alert 3</button> 
+
+       <hr>
+       <h4>This part will use the document write</h4>
+       <button type="button" onclick="docwrite()">Click me to clear</button>
+       
+
+       <hr>
+   <script>
+    function changep1() {
+       document.getElementById('p1').innerHTML = 'Ang paragraph ay nabago na gamit ang JavaScript!'; }
+       function changep2() {
+        document.getElementById('p2').innerHTML = 'The paragraph has been changed using JavaScript!'; }
+       function alert2() {
+        window.alert("Ito ang Alert 2 gamit ang body!"); }
+        function cons2() {
+            console.log("Ito ang Console Log 2 gamit ang body!"); }
+            function docwrite() {
+                document.write("The previous content has been cleared using document.write()"); }
+    </script>
+</body>
+</html>
