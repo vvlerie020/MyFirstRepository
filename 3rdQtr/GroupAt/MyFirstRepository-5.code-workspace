@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "MyFirstRepository-5",
+			"path": "../.."
+		},
+		{
+			"name": "layout&navigation",
+			"path": "../../../2ndQtr/layout&navigation"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "MyFirstRepository-5"
+	}
+}
