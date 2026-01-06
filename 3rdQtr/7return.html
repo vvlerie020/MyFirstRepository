@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RETURN</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        function f(x){
+            return x;
+        }
+        alert(f(5))
+        function g(x){
+            return x +1
+        }
+        console.log(g(3));
+        function areaSquare(side){
+            return side * side;
+        }
+        let demo = document.getElementById
+        ("demo");
+
+        demo.textContent = 
+        "Area of square with size 4 is"
+        + areaSquare(4);
+
+        function BMI(height, weight){
+            return weight / (height * weight)
+        }
+        console.log("BMI is:" + BMI(1.50, 70))
+    </script>
+
+</body>
+</html>
