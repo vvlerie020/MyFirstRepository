@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJECT</title>
+</head>
+<body>
+   
+<script>
+    function heroStats(health, mana, stamina) {
+        this.health = 100
+        this.mana = 50;   
+        this.stamina = 100;
+    }
+
+     function weaponStats(damage, speed) {
+        this.damage = 25;
+        this.speed = 10;
+    }
+    /* const student = { Name: "John Doe", age: 30, lrn: 123456789, };
+        const student2 = { Name: "Jane Smith", age: 25, lrn: 987654321, };
+        let ictStudent = student;
+        let hummsStudent = student2;
+            console.log(ictStudent);
+            console.log(hummsStudent);
+        let ictName = ictStudent.Name;
+        console.log(ictName);
+        console.log(ictStudent.age); */
+       
+        const cyclops = new heroStats();
+        const Lunox = new heroStats();
+        console.log("cyclops:", cyclops);
+        console.log("Lunox:", Lunox);
+        console.log("Initial Property Values");
+        cyclops.health = 80;
+        console.log("cyclops.health:", cyclops.health);
+        Lunox.health = 60;
+        console.log("Lunox.health:", Lunox.health);
+        console.log("New Property");
+        cyclops.gold = 20;
+        console.log("cyclops.gold:", cyclops.gold);
+        console.log("Deleting Property");
+    delete cyclops.stamina;
+    console.log("cyclops after deleting stamina:", cyclops);
+    
+    const sword = new weaponStats();
+    const bow = new weaponStats();
+
+    cyclops.weapon = sword;
+    Lunox.weapon = bow;
+    cyclops.weapon.damage = 35;
+    Lunox.weapon.damage = 15;
+    console.log("cyclops with weapon:", cyclops.weapon);
+    console.log("Lunox with weapon:", Lunox.weapon);
+
+    </script>
+</body>
+</html>

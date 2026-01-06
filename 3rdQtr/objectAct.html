@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ObjectActivity</title>
+</head>
+<body>
+    
+    <script>
+        function Sanggre(health, energy, magic) {
+        this.health = 200
+        this.energy = 100;   
+        this.magic = 100;
+    }
+
+     function power(damage, speed) {
+        this.damage = 50;
+        this.speed = 35;
+    }
+
+     
+        const Amihan = new Sanggre();
+        const Alena = new Sanggre();
+        console.log("Amihan:", Amihan);
+        console.log("Alena:", Alena);
+        console.log("Updating Property Values");
+        Amihan.health = 150;
+        console.log("Amihan.health:", Amihan.health);
+        Alena.health = 100;
+        console.log("Alena.health:", Alena.health);
+        console.log("New Property");
+        Amihan.ability = "Levitation";
+        console.log("Amihan.ability:", Amihan.ability);
+       const windmanipulation = new power();
+        Amihan.power = windmanipulation;
+        Amihan.power.damage = 70; 
+        console.log("Amihan with wind manipulation:", Amihan.power);
+         Alena.ability = "Hydrokinesis";
+         const Hydrokinesis = new power();
+        Alena.power = Hydrokinesis;
+        Alena.power.damage = 80;
+        console.log("Alena.ability:", Alena.ability);
+         console.log("Alena with Hydrokinesis:", Alena.power);
+        console.log("Deleting Property");
+    delete Amihan.magic;
+    console.log("Amihan after deleting magic:", Amihan);
+
+    </script>
+</body>
+</html>
