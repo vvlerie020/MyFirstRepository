@@ -12,6 +12,14 @@
         this.health = 200
         this.energy = 100;   
         this.magic = 100;
+        this.details = function() {
+            return `Health: ${this.health}, Energy: ${this.energy}, Magic: ${this.magic}`;
+        }
+        this.attack = function(enemy) {
+            enemy.health -= 10;
+            this.energy -= 15;
+            return `Sang'gre attacks - : ${enemy.health}, enemy energy: ${this.energy}`;
+        }
     }
 
      function power(damage, speed) {
@@ -19,7 +27,7 @@
         this.speed = 35;
     }
 
-     
+     console.log("Creating Sang'gre");
         const Amihan = new Sanggre();
         const Alena = new Sanggre();
         console.log("Amihan:", Amihan);
@@ -45,6 +53,13 @@
         console.log("Deleting Property");
     delete Amihan.magic;
     console.log("Amihan after deleting magic:", Amihan);
+    Amihan.blast = 50;
+    Amihan.air = function() {
+      this.energy -= 10;
+        return `Amihan uses air ability, Remaining energy: ${this.energy}, blast: ${this.blast}`;
+    };
+    console.log("Amihan attacks hathor:", Amihan.attack(Alena));
+    console.log("Amihan details:", Amihan.details());
 
     </script>
 </body>
