@@ -55,6 +55,35 @@ button, input, select {
     padding: 10px;
     font-size: 16px;
 }
+
+.weapon-options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.weapon-option {
+    background: none;
+    border: 2px solid transparent;
+    padding: 4px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.weapon-option img {
+    width: 64px;
+    height: 64px;
+    display: block;
+}
+
+.weapon-option.selected {
+    border-color: #ffd700;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
+}
+
+.visually-hidden { position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;border:0;padding:0;margin:-1px;}
 .health-bar {
     width: 100%;
     height: 20px;

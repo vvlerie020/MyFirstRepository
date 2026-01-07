@@ -25,12 +25,21 @@
                 class="health-bar-inner"></div></div>
             <h3>Wins: <span id="player1-wins">0</span></h3>
 
-
-            <select id="player1-weapon">
-                <option value="Sword">Sword</option>
-                <option value="Axe">Axe</option>
-                <option value="Bow">Bow</option>
-            </select>
+            <div class="weapon-options" data-player="1" aria-label="Player 1 weapons" role="toolbar">
+                <button type="button" class="weapon-option selected" data-weapon="Sword" aria-pressed="true" title="Sword">
+                    <img src="images/sword.png" alt="Sword">
+                    <span class="visually-hidden">Sword</span>
+                </button>
+                <button type="button" class="weapon-option" data-weapon="Axe" aria-pressed="false" title="Axe">
+                    <img src="images/axe.png" alt="Axe">
+                    <span class="visually-hidden">Axe</span>
+                </button>
+                <button type="button" class="weapon-option" data-weapon="Bow" aria-pressed="false" title="Bow">
+                    <img src="images/bow.png" alt="Bow">
+                    <span class="visually-hidden">Bow</span>
+                </button>
+            </div>
+            <input type="hidden" id="player1-weapon" value="Sword">
             <button id="player1-attack" 
             onclick="playerAttack(1)" disabled>Attack</button>
         </div>
@@ -40,15 +49,48 @@
             <div class="health-bar"><div id="player2-health-bar" 
                 class="health-bar-inner"></div></div>
             <h3>Wins: <span id="player2-wins">0</span></h3>
-            <select id="player2-weapon">
-                <option value="Sword">Sword</option>
-                <option value="Axe">Axe</option>
-                <option value="Bow">Bow</option>
-            </select>
+            <div class="weapon-options" data-player="2" aria-label="Player 2 weapons" role="toolbar">
+                <button type="button" class="weapon-option selected" data-weapon="Sword" aria-pressed="true" title="Sword">
+                    <img src="images/sword.png" alt="Sword">
+                    <span class="visually-hidden">Sword</span>
+                </button>
+                <button type="button" class="weapon-option" data-weapon="Axe" aria-pressed="false" title="Axe">
+                    <img src="images/axe.png" alt="Axe">
+                    <span class="visually-hidden">Axe</span>
+                </button>
+                <button type="button" class="weapon-option" data-weapon="Bow" aria-pressed="false" title="Bow">
+                    <img src="images/bow.png" alt="Bow">
+                    <span class="visually-hidden">Bow</span>
+                </button>
+            </div>
+            <input type="hidden" id="player2-weapon" value="Sword">
             <button id="player2-attack" onclick="playerAttack(2)" 
             disabled>Attack</button>
         </div>
     </div>
     <div id="game-log"><h3>Game Log</h3></div>
+
+    <script>
+    // Weapon image selection behavior
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.weapon-options').forEach(function(container){
+        container.addEventListener('click', function(e){
+          var btn = e.target.closest('.weapon-option');
+          if(!btn) return;
+          // deselect others
+          container.querySelectorAll('.weapon-option').forEach(function(b){
+            b.classList.remove('selected');
+            b.setAttribute('aria-pressed','false');
+          });
+          btn.classList.add('selected');
+          btn.setAttribute('aria-pressed','true');
+          var weapon = btn.dataset.weapon;
+          var player = container.dataset.player;
+          var hidden = document.getElementById('player' + player + '-weapon');
+          if(hidden) hidden.value = weapon;
+        });
+      });
+    });
+    </script>
 </body>
 </html>
