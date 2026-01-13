@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="castillojava.js"></script>
+    <link rel="stylesheet" type="text/css" href="castillowebpage.css">
+    <title>web page</title>
+</head>
+<body>
+    <style>
+        * {
+            text-align: center;
+        }
+        table, td, th, td {
+            border-color: rgb(129, 151, 42);
+            border-style: solid;
+            width: 100%;
+            height: 100%;
+
+        }
+        html {
+            height: 100%;
+            width: 100%;
+        }
+        table {
+            border-style: solid;
+            padding: 10px;
+            margin-bottom: 10%;
+            margin-bottom: 5PX;
+            
+        }
+        th {
+            width: 25%;
+        }
+        .an {
+            background-color: rgb(218, 240, 165);
+            color: rgb(98, 99, 58);
+        }
+        .en {
+            background-color: rgb(174, 190, 82);
+            color: rgb(0, 0, 0);
+        }
+        table {
+            background-color: rgb(180, 223, 79);
+        }
+        td {
+            width: 25%;
+        }
+    </style>
+    <h2>LONG TEST OF CASTILLO</h2>
+    <table>
+        <tr class="an">
+            <th>Operator</th>
+            <th>Answer</th>
+        </tr>
+        </tr>
+        <tr class="en">
+            <th><button onclick="addition()">Addition</button></th>
+            <th><p id="addition">Sum will appear here!</p></th>
+     
+        <tr class="en">
+            <th><button onclick="subtraction()">Subtraction</button></th>
+            <th><p id="subtract">Difference will appear here!</p></th>
+      
+        <tr class="en">
+            <th><button onclick="multiplication()">Multiplicaiton</button></th>
+            <th><p id="multiply">Product will appear here!</p></th>
+        <tr class="en">
+            <th><button onclick="division()">Division</button></th>
+            <th><p id="divide">Quotient will appear here!</p></th>
+        </tr>
+        <table>
+            <tr class="an">
+                <th>First Value</th>
+                <th>Second Value</th>
+                <th>Comparison</th>
+                <th>Answer</th>
+            </tr>
+            <tr class="en">
+            <td>
+                <label for="num1"><b>Select a number here!</b></label>
+                <select id="num1" name="numA">
+                    <OPTION value=""></OPTION>
+                    <OPTION value="1">1</OPTION>
+                    <OPTION value="2">2</OPTION>
+                    <OPTION value="3">3</OPTION>
+                    <OPTION value="4">4</OPTION>
+                    <OPTION value="5">5</OPTION>
+                    <OPTION value="6">6</OPTION>
+                    <OPTION value="7">7</OPTION>
+                    <OPTION value="8">8</OPTION>
+                    <OPTION value="9">9</OPTION>
+                    <OPTION value="10">10</OPTION>
+                </select>
+            </td>
+            <td>
+                <label for="num2"><b>Select a number here!</b></label>
+                <select id="num2" name="numB">
+                    <OPTION value=""></OPTION>
+                    <OPTION value="1">1</OPTION>
+                    <OPTION value="2">2</OPTION>
+                    <OPTION value="3">3</OPTION>
+                    <OPTION value="4">4</OPTION>
+                    <OPTION value="5">5</OPTION>
+                    <OPTION value="6">6</OPTION>
+                    <OPTION value="7">7</OPTION>
+                    <OPTION value="8">8</OPTION>
+                    <OPTION value="9">9</OPTION>
+                    <OPTION value="10">10</OPTION>
+                </select>
+            </td>
+            <td>
+                <label>Is the first number</label>
+                <button onclick="equalsOperator()">Equals</button>
+                <label>to the second number?</label>
+            </td>
+            <td><p id="equalsAns">Answer will appear here!</p></td>
+            </tr>
+        <tr class="en">
+            </tr>
+            <tr class="en">
+                <td>
+                <form>
+                    <input type="range" id="num3"
+                    oninput="x.value=num3.value">
+                    <output id="x"></output>
+                </form>
+                </td>
+                <td>
+                    <form>
+                        <input type="range" id="num4"
+                        oninput="y.value=num4.value">
+                        <output id="y"></output>
+                    </form>
+                    </td>
+                <td>
+                    <label>Is the first number</label>
+                    <button onclick="notEqualsOperator()">Not Equals</button>
+                    <label>to the second number?</label>
+                </td>
+                <td><p id="notEqualsAns">Answer will appear here!</p></td>
+            </tr>
+            <tr class="en">
+                <td>
+                    <input type="number" id="num5">
+                </td>
+                <td>
+                    <input type="number" id="num6">
+                </td>
+                <td>
+                    <label>Is the first number</label>
+                    <button onclick="lessThanOperator()">Less Than</button>
+                    <label>to the second number?</label>
+                </td>
+                <td><p id="lessThanAns">answer will appear here!</p></td>
+            <tr class="en">
+                <td>
+                    <label for="num7"><b>Select a number here!</b></label>
+                    <select id="num7" name="numG">
+                        <OPTION value=""></OPTION>
+                        <OPTION value="1">1</OPTION>
+                        <OPTION value="2">2</OPTION>
+                        <OPTION value="3">3</OPTION>
+                        <OPTION value="4">4</OPTION>
+                        <OPTION value="5">5</OPTION>
+                        <OPTION value="6">6</OPTION>
+                        <OPTION value="7">7</OPTION>
+                        <OPTION value="8">8</OPTION>
+                        <OPTION value="9">9</OPTION>
+                        <OPTION value="10">10</OPTION>
+                    </select>
+                </td>
+                <td>
+                    <label for="num8"><b>Select a number here!</b></label>
+                    <select id="num8" name="numH">
+                        <OPTION value=""></OPTION>
+                        <OPTION value="1">1</OPTION>
+                        <OPTION value="2">2</OPTION>
+                        <OPTION value="3">3</OPTION>
+                        <OPTION value="4">4</OPTION>
+                        <OPTION value="5">5</OPTION>
+                        <OPTION value="6">6</OPTION>
+                        <OPTION value="7">7</OPTION>
+                        <OPTION value="8">8</OPTION>
+                        <OPTION value="9">9</OPTION>
+                        <OPTION value="10">10</OPTION>
+                    </select>
+                </td>
+                <td>
+                    <label>Is the first number</label>
+                    <button onclick="greaterThanOperator()">Greater Than</button>
+                    <label>to the second number?</label>
+                </td>
+                <td><p id="greaterThanAns">answer will appear here!</p></td>
+            </tr>
+        </table>
+</body>
+</html>

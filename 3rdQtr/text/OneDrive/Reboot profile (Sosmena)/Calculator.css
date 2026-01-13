@@ -1,0 +1,51 @@
+.Calcu {
+    width: 300px;
+    height: 430px;
+    margin: 20px auto;
+    border: 3px solid red;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    background-color: brown;
+}
+
+h1 {
+    text-align: center;
+    padding: 23px;
+    background-color: rosybrown;
+    color: crimson;
+}
+
+input:hover {
+    background-color: crimson;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    margin: 2px;
+    cursor: pointer;
+    background-color: rosybrown;
+    color: whitesmoke;
+}
+
+.numview {
+    text-align: right;
+    width: 223px;
+    margin: 5px;
+    font-size: 25px;
+    padding: 5px;
+    background-color: whitesmoke;
+}
+
+.dis {
+position: relative;
+margin-left: 38px;
+margin-top: 50px;
+}

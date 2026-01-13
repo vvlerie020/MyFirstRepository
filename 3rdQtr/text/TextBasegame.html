@@ -6,6 +6,7 @@
     initial-scale=1.0">
     <title>Text Base Game</title>
     <link rel="stylesheet" href="textbasegame.css">
+    <script src="laro.js"></script>
 </head>
 <body>
     <h1>Two-Player Text-Based Battle Game</h1>
@@ -14,8 +15,8 @@
         "Enter Player 1 name" oninput="validateNames()">
         <input type="text" id="player2-name" placeholder=
         "Enter Player 2 name" oninput="validateNames()"><br>
-        <button id="start-game" onclick="startBattle()" 
-        disabled>Start Game</button>
+        <button id="start-game" onclick="startGame()" 
+        >Start Game</button>
     </div> <br>
     <div id="game-container">
         <div class="player-container" id="player1">
@@ -25,23 +26,29 @@
                 class="health-bar-inner"></div></div>
             <h3>Wins: <span id="player1-wins">0</span></h3>
 
-            <div class="weapon-options" data-player="1" aria-label="Player 1 weapons" role="toolbar">
-                <button type="button" class="weapon-option selected" data-weapon="Sword" aria-pressed="true" title="Sword">
-                    <img src="images/sword.png" alt="Sword">
-                    <span class="visually-hidden">Sword</span>
+             <div class="weapon-options" data-player="1" aria-label="Player 1 weapons" role="toolbar">
+               <button type="button" class="weapon-img" data-weapon="air" aria-pressed="true" title="Brilyante ng hangin">
+                    <img src="air-removebg-preview.png" alt="air"> 
+                    <span class="visually-hidden">air</span>
                 </button>
-                <button type="button" class="weapon-option" data-weapon="Axe" aria-pressed="false" title="Axe">
-                    <img src="images/axe.png" alt="Axe">
-                    <span class="visually-hidden">Axe</span>
+                <button type="button" class="weapon-img" data-weapon="fire" aria-pressed="false" title="Brilyante ng apoy">
+                    <img src="fire-removebg-preview.png" alt="fire">
+                    <span class="visually-hidden">fire</span>
                 </button>
-                <button type="button" class="weapon-option" data-weapon="Bow" aria-pressed="false" title="Bow">
-                    <img src="images/bow.png" alt="Bow">
-                    <span class="visually-hidden">Bow</span>
+                <button type="button" class="weapon-img" data-weapon="water" aria-pressed="false" title="Brilyante ng tubig">
+                    <img src="water-removebg-preview.png" alt="water">
+                    <span class="visually-hidden">water</span>
+                </button>
+                  <button type="button" class="weapon-img" data-weapon="earth" aria-pressed="false" title="Brilyante ng lupa">
+                    <img src="EarthGem-removebg-preview.png" alt="earth">
+                    <span class="visually-hidden">earth</span>
                 </button>
             </div>
-            <input type="hidden" id="player1-weapon" value="Sword">
+            <input type="hidden" id="player1-weapon" value="air">
             <button id="player1-attack" 
-            onclick="playerAttack(1)" disabled>Attack</button>
+            onclick="playerAttack(1)" /*disabled*/ aria-pressed="false"> <img src="atat-removebg-preview.png" alt="">
+            
+            </button>
         </div>
         <div class="player-container" id="player2">
             <h2 id="player2-title">Player 2</h2>
@@ -50,35 +57,51 @@
                 class="health-bar-inner"></div></div>
             <h3>Wins: <span id="player2-wins">0</span></h3>
             <div class="weapon-options" data-player="2" aria-label="Player 2 weapons" role="toolbar">
-                <button type="button" class="weapon-option selected" data-weapon="Sword" aria-pressed="true" title="Sword">
-                    <img src="images/sword.png" alt="Sword">
-                    <span class="visually-hidden">Sword</span>
+                <button type="button" class="weapon-img" data-weapon="air" >
+                    <img src="air-removebg-preview.png" alt="air">
+                    <span class="visually-hidden">air</span>
                 </button>
-                <button type="button" class="weapon-option" data-weapon="Axe" aria-pressed="false" title="Axe">
-                    <img src="images/axe.png" alt="Axe">
-                    <span class="visually-hidden">Axe</span>
+                <button type="button" class="weapon-img" data-weapon="fire" >
+                    <img src="fire-removebg-preview.png" alt="fire">
+                    <span class="visually-hidden">fire</span>
                 </button>
-                <button type="button" class="weapon-option" data-weapon="Bow" aria-pressed="false" title="Bow">
-                    <img src="images/bow.png" alt="Bow">
-                    <span class="visually-hidden">Bow</span>
+                <button type="button" class="weapon-img" data-weapon="water" >
+                    <img src="water-removebg-preview.png" alt="water">
+                    <span class="visually-hidden">water</span>
+                </button>
+                  <button type="button" class="weapon-img" data-weapon="earth" >
+                    <img src="EarthGem-removebg-preview.png" alt="earth">
+                    <span class="visually-hidden">earth</span>
                 </button>
             </div>
-            <input type="hidden" id="player2-weapon" value="Sword">
+            <input type="hidden" id="player2-weapon" value="air">
             <button id="player2-attack" onclick="playerAttack(2)" 
-            disabled>Attack</button>
+            /*disabled*/ >Attack</button>
         </div>
     </div>
     <div id="game-log"><h3>Game Log</h3></div>
 
     <script>
+
+       
+    function validateNames() {
+      var p1Name = document.getElementById('player1-name').value.trim();
+      var p2Name = document.getElementById('player2-name').value.trim();
+      var startBtn = document.getElementById('start-game');
+      startBtn.disabled = (p1Name === '' || p2Name === '');
+    }
+    // Start the battle (kept for compatibility)
+    function startBattle() { startGame(); }
+   
+
     // Weapon image selection behavior
     document.addEventListener('DOMContentLoaded', function () {
       document.querySelectorAll('.weapon-options').forEach(function(container){
         container.addEventListener('click', function(e){
-          var btn = e.target.closest('.weapon-option');
-          if(!btn) return;
+          var btn = e.target.closest('button[data-weapon]');
+          if(!btn || !container.contains(btn)) return;
           // deselect others
-          container.querySelectorAll('.weapon-option').forEach(function(b){
+          container.querySelectorAll('button[data-weapon]').forEach(function(b){
             b.classList.remove('selected');
             b.setAttribute('aria-pressed','false');
           });
@@ -88,9 +111,17 @@
           var player = container.dataset.player;
           var hidden = document.getElementById('player' + player + '-weapon');
           if(hidden) hidden.value = weapon;
+          // Log the selection in the requested format: "(name) chose Brilyante ng ... (weapon)"
+          var titleElem = document.getElementById('player' + player + '-title');
+          var inputElem = document.getElementById('player' + player + '-name');
+          var playerName = (titleElem && titleElem.textContent.trim()) || (inputElem && inputElem.value.trim()) || ('Player ' + player);
+          // Use the button's title for the Filipino "Brilyante ng ..." phrase
+          var phrase = btn.title || ('Brilyante ng ' + weapon);
+          messageLog(playerName + ' chose ' + phrase + ' (' + weapon + ')');
         });
       });
     });
     </script>
+
 </body>
 </html>

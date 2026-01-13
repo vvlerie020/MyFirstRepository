@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="encoder(mainsource).css">
+    <link rel="stylesheet" type="text/css" href="encoder(mainsource).css">
+            <div class="navbar glow1">
+                <a href="Profile(main).html">Profile</a>
+                <div class="dropdown">
+                    <button class="dropbtn glow1">Activities</button>
+                    <div class="dropdown-content">
+                        <a href="Lesson1(CreateWebsite).html">L1 (Create Website)</a>
+                        <a href="Lesson2(CreateParagraph).html">L2 (Create Paragraph)</a>
+                        <a href="Lesson3(TextFormatting).html">L3 (Text Formatting)</a>
+                        <a href="Lesson4(Coloration).html">L4 (Coloration)</a>
+                        <a href="Lesson5(ProfileIndex).html">L5 (Profile Index)</a>
+                        <a href="Lesson6(InternalCSS).html">L6 (Internal CSS)</a>
+                        <a href="Lesson7(TableLabeling).html">L7 (Table Labeling)</a>
+                        <a href="Lesson8(DivisionListing).html">L8 (Division Listing)</a>
+                        <a href="Lesson9(ClassificationID).html">L9 (Classification ID)</a>
+                        <a href="Lesson10(CSSLinker).html">L10 (CSS Linker)</a>
+                        <a href="Lesson11(NavigationBar).html">L11 (Navigation Bar)</a>
+                        <a href="Lesson12(Positioning).html">L12 (Positioning)</a>
+                        <a href="Lesson13&14(PositioningImage).html">L13&14 (Positioning Image)</a>
+                        <a href="Lesson15(ResponsiveHTML).html">L15 (Responsive HTML)</a>
+                        <a href="Lesson16(GridHTML).html">L16 (Grid HTML)</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn glow1">Activities (2.0)</button>
+                    <div class="dropdown-content">
+                        <a href="Lesson01(JavaScript).html">L01 (Java Script)</a>
+                        <a href="Lesson02(WindowAlertCalculator)PT1.html">L02 (WindowAlertCalculator) PT1</a>
+                        <a href="Lesson02(Calculator)PT2.html">L02 (Calculator) PT2</a>
+                        <a href="Lesson02(LengthConverterJava)PT3.html">L02 (Length Converter Java) PT3</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn glow1">Quiz</button>
+                    <div class="dropdown-content">
+                        <a href="Quiz1(ColorizingTable).html">Q1 (Colorizing Table)</a>
+                    </div>
+                </div>
+                <a href="About(main).html">About</a>
+            </div>
+        </link>
+    <title>Quiz2(Gridding)</title>
+    <style>
+        .num1 {
+            width: 100%;
+            height: 100%;
+            border: solid rgb(0, 0, 0);
+        }
+        .item1 {
+            grid-area: Logo;
+            border: solid green;
+            height: 100px;
+            color: salmon;
+            background-color: brown;
+        } 
+        .item2 {
+            grid-area: SearchBar;
+            border: solid green;
+            height: 100px;
+            color: salmon;
+            background-color: brown;
+        }
+        .item3 {
+            grid-area: NavBar;
+            border: solid green;
+            height: 100px;
+            color: salmon;
+            background-color: brown;
+        }
+        .grid-container {
+            border: rosybrown solid;
+            display: grid;
+            grid-template-areas:
+                'Logo SearchBar SearchBar SearchBar NavBar NavBar NavBar';
+            gap: 5px;
+            padding: 10px;
+            background-color: darkred;
+        }
+        .grid-container2 {
+            border: rosybrown solid;
+            display: grid;
+            grid-template-areas:
+                'Atem1 Atem1 Atem1 Atem2 Atem2 Atem2';
+            gap: 5px;
+            padding: 10px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            background-color: darkred;
+        }
+        .btem1 {
+            grid-area: Atem1;
+            border: solid blue; 
+            height: 100px;
+            color: salmon;
+            background-color: brown;
+        }
+        .btem2 {
+            grid-area: Atem2;
+            border: solid blue;
+            height: 100px;
+            color: salmon;
+            background-color: brown;
+        }
+        .containing {
+            display: grid;
+            grid-template-areas:
+                'first first first first second second'
+                'first first first first second second'
+                'first first first first second second'
+                'first first first first second second'
+                'first first first first second second'
+                'first first first first second second'
+                ;
+            gap: 5px;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        .grid-container3 {
+            display: grid;
+            grid-area: first;
+            grid-template-areas:
+                'atem1 atem2'
+                'atem3 atem4'
+                'atem5 atem6'
+                'atem7 atem8'
+                'atem9 atem9'
+                'atem9 atem9'
+                ;
+            gap: 5px;
+            padding: 10px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            border: solid rosybrown;
+            background-color: darkred;
+        }
+        .atem1 {
+            grid-area: atem1;
+            border: solid yellow;
+            position: relative;
+            height: 100px;
+            background-color: brown;
+            color: salmon;
+        }
+        .atem2 {
+            grid-area: atem2;
+            border: solid yellow;
+            position: relative;
+            height: 100px;
+            background-color: brown;
+            color: salmon;
+        }
+        .atem3 {
+            grid-area: atem3;
+            border: solid yellow;
+            position: relative;
+            height: 100px;
+            background-color: brown;
+            color: salmon;
+        }
+        .atem4 {
+            grid-area: atem4;
+            border: solid yellow;
+            position: relative;
+            height: 100px;
+            background-color: brown;
+            color: salmon;
+        }
+        .atem5 {
+            grid-area: atem5;
+            border: solid yellow;;
+            position: relative;
+            height: 100px;
+            background-color: brown;
+            color: salmon;
+        }
+        .atem6 {
+            grid-area: atem6;
+            border: solid yellow;
+            position: relative;
+            height: 100px;
+            background-color: brown;
+            color: salmon;
+        }
+        .atem7 {
+            grid-area: atem7;
+            border: solid yellow;
+            position: relative;
+            height: 100px;
+            background-color: brown;
+            color: salmon;
+        }
+        .atem8 {
+            grid-area: atem8;
+            border: solid yellow;
+            position: relative;
+            height: 100px;
+            background-color: brown;
+            color: salmon;
+        }
+        .atem9 {
+            grid-area: atem9;
+            border: solid yellow;
+            position: relative;
+            height: 100px;
+            background-color: brown;
+            color: salmon;
+        }
+        .grid-container4 {
+            display: grid;
+            grid-area: second;
+            grid-template-areas:
+                'sale1'
+                'sale2'
+                'sale3'
+                'sale4'
+                ;
+            gap: 5px;
+            padding: 10px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            border: solid rosybrown;
+            background-color: darkred;
+        }
+        .ctem1 {
+            grid-area: sale1;
+            border: solid red;
+            position: relative;
+            height: 100px;
+            color: salmon;
+            background-color: brown;
+        }
+        .ctem2 {
+            grid-area: sale2;
+            border: solid red;
+            position: relative;
+            height: 100px;
+            color: salmon;
+            background-color: brown;
+        }
+        .ctem3 {
+            grid-area: sale3;
+            border: solid red;
+            position: relative;
+            height: 100px;
+            color: salmon;
+            background-color: brown;
+        }
+        .ctem4 {
+            grid-area: sale4;
+            border: solid red;
+            position: relative;
+            height: 100px;
+            color: salmon;
+            background-color: brown;
+        }
+        .grid-container5 {
+            display: grid;
+            grid-template-areas:
+            'info links follow'
+            'copyright copyright copyright';
+            gap: 5px;
+            padding: 5px;
+            margin-top: 5px;
+            border: rosybrown solid;
+            background-color: darkred;
+        }
+        .dtem1 {
+            grid-area: info;
+            border: solid purple;
+            position: relative;
+            height: 100px;
+            color: salmon;
+            background-color: brown;
+        }
+        .dtem2 {
+            grid-area: links;
+            border: solid purple;
+            position: relative;
+            height: 100px;
+            color: salmon;
+            background-color: brown;
+        }
+        .dtem3 {
+            grid-area: follow;
+            border: solid purple;
+            position: relative;
+            height: 100px;
+            color: salmon;
+            background-color: brown;
+        }
+        .dtem4 {
+            grid-area: copyright;
+            border: solid purple;
+            position: relative;
+            height: 50px;
+            color: salmon;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+<h2 style="text-align: center; color: brown; background-color: tan; border: 2px solid brown; margin: 0%;">Quiz #2</h2>
+<h2 style="text-align: center; color: brown; background-color: tan; border: 2px solid brown; margin: 0%;">Kent Louie E. Sosmena</h2>
+<div class="grid-container">
+<div class="item1">Logo</div>
+<div class="item2">Search Bar</div>
+<div class="item3">NavBar</div>
+</div>
+
+<div class="grid-container2">
+<div class="btem1">Ads #1</div>
+<div class="btem2">Ads #2</div>
+</div>
+<div class="containing">
+        <div class="grid-container3">
+            <div class="atem1">Item 1</div>
+            <div class="atem2">Item 2</div>
+            <div class="atem3">Item 3</div>
+            <div class="atem4">Item 4</div>
+            <div class="atem5">Item 5</div>
+            <div class="atem6">Item 6</div>
+            <div class="atem7">Item 7</div>
+            <div class="atem8">Item 8</div>
+            <div class="atem9">Item 9</div>
+        </div>
+        <div class="grid-container4">
+            <div class="ctem1">Sale 1</div>
+            <div class="ctem2">Sale 2</div>
+            <div class="ctem3">Sale 3</div>
+            <div class="ctem4">Sale 4</div>
+        </div>
+</div>
+<div class="grid-container5">
+    <div class="dtem1">Info</div>
+    <div class="dtem2">Links</div>
+    <div class="dtem3">Follow</div>
+    <div class="dtem4">Copyright</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson02(Calculator)PT2</title>
+    <link rel="stylesheet" href="Calculator.css">
+    <link rel="stylesheet" type="text/css" href="encoder(mainsource).css">
+            <div class="navbar glow1">
+                <a href="Profile(main).html">Profile</a>
+                <div class="dropdown">
+                    <button class="dropbtn glow1">Activities</button>
+                    <div class="dropdown-content">
+                        <a href="Lesson1(CreateWebsite).html">L1 (Create Website)</a>
+                        <a href="Lesson2(CreateParagraph).html">L2 (Create Paragraph)</a>
+                        <a href="Lesson3(TextFormatting).html">L3 (Text Formatting)</a>
+                        <a href="Lesson4(Coloration).html">L4 (Coloration)</a>
+                        <a href="Lesson5(ProfileIndex).html">L5 (Profile Index)</a>
+                        <a href="Lesson6(InternalCSS).html">L6 (Internal CSS)</a>
+                        <a href="Lesson7(TableLabeling).html">L7 (Table Labeling)</a>
+                        <a href="Lesson8(DivisionListing).html">L8 (Division Listing)</a>
+                        <a href="Lesson9(ClassificationID).html">L9 (Classification ID)</a>
+                        <a href="Lesson10(CSSLinker).html">L10 (CSS Linker)</a>
+                        <a href="Lesson11(NavigationBar).html">L11 (Navigation Bar)</a>
+                        <a href="Lesson12(Positioning).html">L12 (Positioning)</a>
+                        <a href="Lesson13&14(PositioningImage).html">L13&14 (Positioning Image)</a>
+                        <a href="Lesson15(ResponsiveHTML).html">L15 (Responsive HTML)</a>
+                        <a href="Lesson16(GridHTML).html">L16 (Grid HTML)</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn glow1">Activities (2.0)</button>
+                    <div class="dropdown-content">
+                        <a href="Lesson01(JavaScript).html">L01 (Java Script)</a>
+                        <a href="Lesson02(WindowAlertCalculator)PT1.html">L02 (WindowAlertCalculator) PT1</a>
+                        <a href="Lesson02(LengthConverterJava)PT3.html">L02 (Length Converter Java) PT3</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn glow1">Quiz</button>
+                    <div class="dropdown-content">
+                        <a href="Quiz1(ColorizingTable).html">Q1 (Colorizing Table)</a>
+                        <a href="Quiz2(GriddingTable).html">Q2 (Gridding Table)</a>
+                    </div>
+                </div>
+                <a href="About(main).html">About</a>
+            </div>
+        </link>
+    <script src="Calculator.js"></script>
+</head>
+<body>
+    <h1 style="text-align: center;">Calculator Program in JavaScript</h1>
+    <div class="Calcu">
+        <form name="input">
+            <input style="position: relative; margin-top: 20px;" id="input" class="numview" name="numview">
+        </form>
+        <table class="dis">
+            <tr>
+                <td><input class="btn" type="button" value="C" onclick="input.numview.value=''"></td>
+                <td><input class="btn" type="button" value="<" onclick="backspace()"></td>
+                <td><input class="btn" type="button" value="'/." onclick="keypress('/')"></td>
+                <td><input class="btn" type="button" value="x" onclick="keypress('*')"></td>
+            </tr>
+            <tr>
+                <td><input class="btn" type="button" value="7" onclick="insert(7)"></td>
+                <td><input class="btn" type="button" value="8" onclick="insert(8)"></td>
+                <td><input class="btn" type="button" value="9" onclick="insert(9)"></td>
+                <td><input class="btn" type="button" value="-" onclick="keypress('-')"></td>
+            </tr>
+            <tr>
+                <td><input class="btn" type="button" value="4" onclick="insert(4)"></td>
+                <td><input class="btn" type="button" value="5" onclick="insert(5)"></td>
+                <td><input class="btn" type="button" value="6" onclick="insert(6)"></td>
+                <td><input class="btn" type="button" value="+" onclick="keypress('+')"></td>
+            </tr>
+            <tr>
+                <td><input class="btn" type="button" value="1" onclick="insert(1)"></td>
+                <td><input class="btn" type="button" value="2" onclick="insert(2)"></td>
+                <td><input class="btn" type="button" value="3" onclick="insert(3)"></td>
+                <td rowspan="5"><input class="btn" style="height: 110px;" type="button" value="=" onclick="equals()"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input class="btn" style="width: 106px;" type="button" value="0" onclick="insert(0)"></td>
+                <td><input class="btn" type="button" value="." onclick="insert('.')"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -5,7 +5,7 @@ body {
 
 }
 body {
-    background-image: url("digital-art-fire.jpg");
+    background-image: url("encanto.webp");
     background-repeat: no-repeat;
   background-position: right top;
     background-size: cover;
@@ -23,6 +23,18 @@ body {
     width: 40%;
     background: #f9f9f92d;
     display: inline-block;
+}
+#player1-attack {
+   border: none;
+
+    background-color: #cbd8cc00;
+    cursor: pointer;
+
+}
+#player1-attack img{
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
 }
 #game-log {
     position: relative;
@@ -63,7 +75,7 @@ button, input, select {
     margin: 10px 0;
 }
 
-.weapon-option {
+.weapon-img {
     background: none;
     border: 2px solid transparent;
     padding: 4px;
@@ -71,7 +83,7 @@ button, input, select {
     cursor: pointer;
 }
 
-.weapon-option img {
+.weapon-img img {
     width: 64px;
     height: 64px;
     display: block;

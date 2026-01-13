@@ -1,0 +1,81 @@
+body {
+    background-color: silver;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: tan;
+}
+a {
+  color: brown;
+}
+.navbar {
+    overflow: hidden;
+    background-color: brown;
+    font-family: Arial;
+  }
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: tan;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: tan;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: salmon;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: brown;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px brown;
+    z-index: 1;
+  }
+  .dropdown-content a {
+    float: none;
+    color: rosybrown;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown-content a:hover {
+    background-color: salmon;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .glow1 {
+    color: ffffff;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    -o-animation: glow 1s ease-in-out infinite alternate;
+  }
+  @-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px firebrick, 0 0 20px firebrick, 0 0 30px firebrick,
+                     0 0 50px firebrick, 0 0 60px firebrick, 0 0 70px firebrick;
+    }
+    to {
+        text-shadow: 0 0 10px crimson, 0 0 20px crimson, 0 0 30px crimson,
+                     0 0 50px crimson, 0 0 60px crimson, 0 0 70px crimson;
+    }
+  }

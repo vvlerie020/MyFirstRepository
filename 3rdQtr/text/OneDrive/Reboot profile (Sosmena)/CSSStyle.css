@@ -1,0 +1,32 @@
+h1,h2,p {
+    color: whitesmoke;
+    text-align: center;
+}
+body {
+    background-color: silver;
+}
+h1 {
+    color: brown;
+    border: 2px dotted brown;
+    background-color: tan;
+    border-radius: 25px;
+}
+h2 {
+    border: 5px double navy;
+    margin-bottom: 50px;
+    background-color: skyblue;
+    color: brown;
+}
+p {
+    border: 3px solid gray;
+    background-color: brown;
+    color: skyblue;
+}
+#Description {
+    border: 10px solid gray;
+    background-color: brown;
+}
+.Hobby {
+    background-color: brown;
+    color: skyblue;
+}
