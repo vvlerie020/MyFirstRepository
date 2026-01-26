@@ -5,8 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FUNCTION</title>
     <link rel="stylesheet" href="function.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 400PX;
+  overflow: auto;
+  z-index: 102;
+  left: 0;
+  top: 25.1%;
+}
+
+li a {
+  display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: beige;
+}
+
+li a.active {
+  background-color: #f8c8c8;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #e9cccc;
+  color: white;
+}
+header {
+  background-color: #F3C5C5;
+  padding: 30px;
+  text-align: center;
+  font-size: 23.57px;
+  color: black;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  width: 100%;
+  z-index: 101;
+}
+article {
+  float: left;
+  padding: 20px;
+  width: calc(100% - 245px);
+  background-color: #FBE8E7;
+   margin-top: 160px;
+  color: BLACK;
+  margin-left: 200px;
+}
+#ads{
+    border: solid #F3C5C5;
+    height: 65px;
+    width: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #F3C5C5;
+    translate: 650% 450%;
+    gap: 5px;
+    border-radius: 100px;
+}
+ a {
+    text-decoration: none;
+    color: black;
+text-align: center;
+
+}
+
+
+    </style>
 </head>
 <body>
+    <header>
+  <h2>ACTIVITIES</h2>
+</header>
+
+<section>
+    
+        <ul>
+      <li><a class="active" href="1Javascript.html">JAVASCRIPT</a></li>
+      <li><a href="2syntax.html">SYNTAX</a></li>
+      <li><a href="3variable.html">VARIABLE</a></li>
+      <li><a href="4Conditional.html">CONDITIONAL</a></li>
+      <li><a href="Conditionalstate.html">CONDITIONAL STATEMENT</a></li>
+      <li><a href="bmi.html">BMI</a></li>
+      <li><a href="calculator.html">CALCULATOR</a></li>
+      <li><a href="7return.html">RETURN</a></li>
+      <li><a href="function.html">FUNCTION</a></li>
+      <li><a href="loop.html">LOOP</a></li>
+      <li><a href="object.html">OBJECT</a></li>
+      <li><a href="objectAct.html">OBJECT ACTIVITY</a></li>
+      <li><a href="operation.html">OPERATION</a></li>
+     <li><a href="string.html">STRING</a></li>
+      <li><a href="text/TextBasegame.html">TEXT BASE GAME</a></li>
+        </ul>
+    
+
+    <article>
     <p id="test"></p>
     <p id="para"></p>
          <hr>
@@ -152,5 +257,10 @@
         // addp.textContent = addition(10,20);
 
     </Script>
+      </article>
+</section>
+     <DIV id="ads">
+       <a href="Index2.html"><h2>HOME</h2></a>
+    </DIV>
 </body>
 </html>
